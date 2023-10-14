@@ -31,7 +31,7 @@ nav p {
     margin: 0;
 }
 
-/* Estilos de la barra de navegación */
+
 .barra-nav {
     list-style-type: none;
     padding: 0;
@@ -49,15 +49,31 @@ nav p {
     color: #1A3D7D;
     font-family: 'EB Garamond', serif;
     transition: color 0.4s;
-    box-shadow: #1A3D7D;
 }
 
 .barra-nav a:hover {
     color: #FFA500; 
-    
 }
-.menu-ham{
+
+.menu-celular{
     display: none;
+}
+.menu-horizontal:hover .menu-vertical {
+    display: block;
+}
+.menu-vertical{
+    display: none;
+    border-radius: 5px;
+    background-color: #1A3D7D;
+    padding: .4rem;
+    font-size: medium;
+    position: absolute;
+}
+.menu-vertical li{
+    list-style-type: none;
+}
+.menu-vertical a{
+    color: #FEFEED;
 }
 
 main{
@@ -108,7 +124,7 @@ video{
 
 .fondo{
     width: 100%;
-    height: 100%;
+    height:  99.6%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.396);
 }
@@ -134,17 +150,60 @@ video{
 }
 
 @media(max-width:600px){
-    .menu-ham{
+    .menu-celular{
         display: block;
     }
+    .menu-ham{
+        position: relative;
+    }
+    .menu{
+        display: none;
+        position: relative;
+        background-color: #1A3D7D;
+        padding: auto;
+        overflow:  visible ;
+        list-style-type: none;
+        transition: color 1s;
+        border-radius: 5px;
+
+    }
+    .menu a{
+        text-decoration: none;
+        color: #FEFEED;
+    }
+
+    .menu-ham:hover .menu{
+        display: block;
+        
+    }
+
+    
+    .menu a:hover {
+        color: #FEFEED;
+        
+        height: 100%;
+    }
+    .menu li:hover {
+        
+        background-color: #FFA500;
+        height: 99%;
+    }
+    
+
+
+    
+  
    
-    .menu-horizontal {
+    .menu-horizontal{
         display: none;
     }
     .video h1{
-        font-size: 2rem;
+        font-size: 3rem;
         z-index: 100;
         color: #FEFEED;
+        background-color: #fefeed39;
+        padding: 2rem;
+        border-radius: 20px;
     }
  
     .video h1::after{
@@ -154,11 +213,11 @@ video{
         content: "";
         margin: auto;
         background-color: #FEFEED;
+
     }
     
     .fondo{
         width: 100%;
-        height: 100%;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.396);
     }
