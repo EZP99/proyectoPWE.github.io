@@ -26,6 +26,20 @@ function cargarContenidoPrincipal() {
     xhr.send();
 }
 
+// Función para cargar y mostrar el encabezado
+function cargarSecHombre() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "./html/seccionHombre", true);
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("secHombre").innerHTML = xhr.responseText;
+        }
+    };
+
+    xhr.send();
+}
+
 // Función para cargar y mostrar el pie de página
 function cargarPieDePagina() {
     var xhr = new XMLHttpRequest();
@@ -44,3 +58,4 @@ function cargarPieDePagina() {
 cargarEncabezado();
 cargarContenidoPrincipal();
 cargarPieDePagina();
+cargarSecHombre();

@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.sec-hombre {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .producto {
+      width: calc(25% - 20px); /* 3 columnas en pantalla grande */
+      margin: 10px;
+      text-align: center;
+    }
+
+    @media (max-width:700px) {
+      .producto {
+        width: calc(33.33% - 20px); /* 3 columnas en pantalla mediana */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .producto {
+        width: calc(50% - 20px); /* 2 columnas en pantalla pequeña */
+      }
+    }
+
+    .producto img {
+        width: 20rem;
+        height: auto;
+    }
